@@ -1,0 +1,4 @@
+kbt_backend/
+venv/
+.env
+.DS_Store

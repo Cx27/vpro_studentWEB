@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VPro Student - Layanan Video Editing Mahasiswa Premium</title>
+  <meta name="description"
+    content="Jasa video editing profesional, cepat, dan murah khusus mahasiswa. Edit tugas kuliah, vlog, skripsi, dan presentasi penelitian.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Global Navigation Bar (Hidden in full dashboards if needed, but here styled beautifully) -->
+  <nav id="global-navbar" class="navbar">
+    <div class="navbar-container">
+      <a href="#" class="nav-logo" id="nav-logo-btn">
+        <img src="logo vp.png" alt="VPro Logo"
+          style="width: 42px; height: 42px; border-radius: 10px; object-fit: cover; box-shadow: 0 0 15px rgba(142, 68, 255, 0.4);">
+        <span class="logo-text">VPro <span class="accent-cyan">Student</span></span>
+      </a>
+
+      <!-- Public Menu -->
+      <ul class="nav-menu" id="nav-public-menu">
+        <li><a href="#hero" class="nav-link active" data-target="hero">Home</a></li>
+        <li><a href="#about" class="nav-link" data-target="about">Tentang Kami</a></li>
+        <li><a href="#portfolio" class="nav-link" data-target="portfolio">Portofolio</a></li>
+        <li><a href="#pricing" class="nav-link" data-target="pricing">Paket Harga</a></li>
+        <li><a href="#contact" class="nav-link" data-target="contact">Kontak</a></li>
+      </ul>
+
+      <div class="nav-actions" id="nav-actions">
+        <!-- Will be dynamically updated by app.js (e.g. Login button or Profile dropdown) -->
+        <a href="#auth" class="btn btn-primary" id="btn-login-redirect">
+          <i data-lucide="log-in"></i>
+          <span>Login / Register</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN APP CONTAINER -->
+  <main id="app-content">
+
+    <!-- ========================================== -->
+    <!-- 1. PUBLIC LANDING VIEW                    -->
+    <!-- ========================================== -->
+    <section id="view-home" class="app-view active">
+
+      <!-- Hero Section -->
+      <section id="hero" class="hero-section">
+        <div class="hero-bg-glow"></div>
+        <div class="container hero-container">
+          <div class="hero-content">
+            <span class="badge badge-outline">
+              <i data-lucide="sparkles"></i> #1 Jasa Edit Video Mahasiswa
+            </span>
+            <h1 class="hero-title">Tugas Video Menumpuk? Serahkan Pada <span class="gradient-text">VPro Student</span>
+            </h1>
+            <p class="hero-subtitle">
+              Edit video presentasi kuliah, dokumentasi acara, penelitian skripsi, hingga konten kreatif dengan kualitas
+              premium, pengerjaan cepat, dan harga ramah dompet mahasiswa.
+            </p>
+            <div class="hero-cta">
+              <button class="btn btn-gradient btn-lg" id="hero-order-now-btn">
+                <i data-lucide="shopping-bag"></i> Pesan Sekarang
+              </button>
+              <a href="#pricing" class="btn btn-outline btn-lg">
+                Lihat Paket Harga
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-num">500+</span>
+                <span class="stat-lbl">Video Selesai</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-num">99%</span>
+                <span class="stat-lbl">Mahasiswa Puas</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-num">&lt; 24 Jam</span>
+                <span class="stat-lbl">Pengerjaan Ekspres</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-graphic">
+            <div class="video-preview-card glass-panel">
+              <div class="card-header-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="file-name">editing_timeline.mp4</span>
+              </div>
+              <div class="video-thumbnail">
+                <img src="logo vp.png" alt="VPro Watermark"
+                  style="position: absolute; top: 12px; left: 12px; width: 35px; opacity: 0.6; border-radius: 8px; z-index: 5;">
+
+                <div class="play-btn-pulse">
+                  <i data-lucide="play" class="fill-cyan"></i>
+                </div>
+                <div class="duration-tag">03:45</div>
+                <div class="timeline-indicator"></div>
+              </div>
+              <div class="timeline-controls">
+                <i data-lucide="skip-back"></i>
+                <i data-lucide="play"></i>
+                <i data-lucide="skip-forward"></i>
+                <div class="timeline-slider">
+                  <div class="timeline-fill"></div>
+                </div>
+                <i data-lucide="volume-2"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tentang Kami Section -->
+      <section id="about" class="about-section scroll-spy-section">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2 class="section-title">Tentang <span class="gradient-text-alt">VPro Student</span></h2>
+            <p class="section-subtitle">Solusi editing video terpercaya yang mengerti kebutuhan dan budget akademis
+              Anda.</p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-info glass-panel">
+              <h3 class="about-info-title">Profil Usaha</h3>
+              <p>
+                VPro Student didirikan oleh sekumpulan mahasiswa kreatif yang menyadari betapa sulitnya membagi waktu
+                antara menyusun materi akademis dan memproduksi video tugas kuliah berkualitas tinggi. Kami hadir
+                sebagai jembatan bagi mahasiswa di seluruh Indonesia untuk mendapatkan hasil video professional tanpa
+                perlu menguasai software editing yang rumit.
+              </p>
+              <div class="vision-mission">
+                <div class="vm-item">
+                  <div class="vm-icon"><i data-lucide="target"></i></div>
+                  <div class="vm-content">
+                    <h4>Visi</h4>
+                    <p>Menjadi platform jasa editing video nomor satu bagi mahasiswa di Indonesia yang mengutamakan
+                      kualitas, kecepatan, dan harga terjangkau.</p>
+                  </div>
+                </div>
+                <div class="vm-item">
+                  <div class="vm-icon"><i data-lucide="compass"></i></div>
+                  <div class="vm-content">
+                    <h4>Misi</h4>
+                    <p>Menyediakan layanan editing video profesional dengan pemesanan terintegrasi, transparan dalam
+                      tracking progres, serta memfasilitasi kebutuhan tugas kuliah hingga kelulusan mahasiswa.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-features">
+              <div class="feature-card glass-panel">
+                <div class="feature-icon bg-purple"><i data-lucide="users"></i></div>
+                <h4>Editor Berpengalaman</h4>
+                <p>Tim editor kami adalah mahasiswa tingkat akhir & fresh graduate jurusan penyiaran/DKV yang kompeten.
+                </p>
+              </div>
+              <div class="feature-card glass-panel">
+                <div class="feature-icon bg-cyan"><i data-lucide="clock"></i></div>
+                <h4>Tepat Waktu</h4>
+                <p>Kami mengedepankan deadline tugas kuliah Anda. Keterlambatan adalah pantangan utama bagi kami.</p>
+              </div>
+              <div class="feature-card glass-panel">
+                <div class="feature-icon bg-emerald"><i data-lucide="refresh-cw"></i></div>
+                <h4>Garansi Revisi</h4>
+                <p>Video kurang sreg? Ajukan revisi dengan mudah melalui dashboard pelacakan khusus Anda.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portofolio Section -->
+      <section id="portfolio" class="portfolio-section scroll-spy-section">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2 class="section-title">Portofolio & <span class="gradient-text">Contoh Suntingan</span></h2>
+            <p class="section-subtitle">Intip hasil karya terbaik yang telah kami kerjakan untuk mahasiswa dari berbagai
+              universitas.</p>
+          </div>
+
+          <div class="portfolio-grid" id="portfolio-list">
+            <!-- Dynamically loaded from Javascript for high flexibility -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Paket Harga Section -->
+      <section id="pricing" class="pricing-section scroll-spy-section">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2 class="section-title">Pilih <span class="gradient-text-alt">Paket Hematmu</span></h2>
+            <p class="section-subtitle">Harga transparan yang disesuaikan khusus kantong mahasiswa dengan hasil
+              maksimal.</p>
+          </div>
+
+          <div class="pricing-grid" id="pricing-packages-list">
+            <!-- Packages dynamically rendered from db.js data -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimoni Section -->
+      <section id="testimonials" class="testimonials-section">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2 class="section-title">Kata <span class="gradient-text">Rekan Mahasiswa</span></h2>
+            <p class="section-subtitle">Apa kata mereka yang telah mempercayakan tugas videonya di VPro Student?</p>
+          </div>
+
+          <div class="testimonials-slider-container">
+            <div class="testimonials-track" id="testimonials-track">
+              <!-- Dynamically populated -->
+            </div>
+            <div class="slider-controls">
+              <button class="slider-btn prev" id="testi-prev"><i data-lucide="chevron-left"></i></button>
+              <button class="slider-btn next" id="testi-next"><i data-lucide="chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kontak Section -->
+      <section id="contact" class="contact-section scroll-spy-section">
+        <div class="container">
+          <div class="contact-box glass-panel">
+            <div class="contact-info">
+              <h3>Hubungi Kami</h3>
+              <p>Punya pertanyaan sebelum memesan? Atau ingin mendiskusikan konsep video khusus? Admin kami siap
+                membantu Anda 24/7.</p>
+
+              <ul class="contact-links-list">
+                <li>
+                  <a href="https://wa.me/6285752076799" target="_blank" class="contact-item-link wa">
+                    <span class="contact-icon"><i data-lucide="message-square"></i></span>
+                    <div class="contact-text">
+                      <span class="label">WhatsApp</span>
+                      <span class="val">+62 812-3456-7890 (Fast Response)</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:halo@vprostudent.com" class="contact-item-link mail">
+                    <span class="contact-icon"><i data-lucide="mail"></i></span>
+                    <div class="contact-text">
+                      <span class="label">Email Resmi</span>
+                      <span class="val">halo@vprostudent.com</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://instagram.com/vprostudent" target="_blank" class="contact-item-link ig">
+                    <span class="contact-icon"><i data-lucide="instagram"></i></span>
+                    <div class="contact-text">
+                      <span class="label">Instagram</span>
+                      <span class="val">@vprostudent</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="contact-form-side">
+              <h4>Kirim Pesan Cepat</h4>
+              <form id="landing-contact-form" class="auth-form">
+                <div class="form-group">
+                  <label for="contact-name">Nama Lengkap</label>
+                  <input type="text" id="contact-name" class="form-control" required placeholder="Masukkan nama Anda">
+                </div>
+                <div class="form-group">
+                  <label for="contact-email">Email</label>
+                  <input type="email" id="contact-email" class="form-control" required placeholder="name@univ.ac.id">
+                </div>
+                <div class="form-group">
+                  <label for="contact-msg">Pesan Anda</label>
+                  <textarea id="contact-msg" class="form-control" rows="4" required
+                    placeholder="Tuliskan pertanyaan atau rencana videomu..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-gradient btn-block">Kirim Pesan</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container footer-container">
+          <p class="copyright">&copy; 2026 VPro Student. All rights reserved. Khusus Mahasiswa Indonesia.</p>
+          <div class="footer-links">
+            <a href="#about">Tentang Kami</a>
+            <a href="#pricing">Harga</a>
+            <a href="#contact">Kontak</a>
+          </div>
+        </div>
+      </footer>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 2. LOGIN / REGISTER VIEW                  -->
+    <!-- ========================================== -->
+    <section id="view-auth" class="app-view">
+      <div class="container auth-container">
+        <div class="auth-box glass-panel">
+
+          <!-- Tab Headers -->
+          <div class="auth-tabs">
+            <button class="auth-tab active" id="tab-login-btn">Masuk</button>
+            <button class="auth-tab" id="tab-register-btn">Daftar Akun</button>
+          </div>
+
+          <!-- LOGIN FORM -->
+          <div id="auth-login-container" class="auth-tab-content active">
+            <div class="auth-header text-center">
+              <h3>Selamat Datang Kembali</h3>
+              <p>Masuk untuk melihat pesanan Anda atau membuat pesanan baru.</p>
+            </div>
+            <form id="form-login" class="auth-form">
+              <div class="form-group">
+                <label for="login-email">Email</label>
+                <div class="input-with-icon">
+                  <i data-lucide="mail"></i>
+                  <input type="email" id="login-email" class="form-control" required placeholder="name@domain.com">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="login-password">Password</label>
+                <div class="input-with-icon">
+                  <i data-lucide="lock"></i>
+                  <input type="password" id="login-password" class="form-control" required placeholder="••••••••">
+                </div>
+              </div>
+              <button type="submit" class="btn btn-gradient btn-block">Masuk Sekarang</button>
+            </form>
+            <div class="auth-tips text-center">
+              <p class="txt-muted">Akun demo default:</p>
+              <p class="txt-muted"><strong>Admin:</strong> admin@vprostudent.com / admin123</p>
+              <p class="txt-muted"><strong>User:</strong> mhs@vprostudent.com / mhs123</p>
+            </div>
+          </div>
+
+          <!-- REGISTER FORM -->
+          <div id="auth-register-container" class="auth-tab-content">
+            <div class="auth-header text-center">
+              <h3>Buat Akun Mahasiswa</h3>
+              <p>Dapatkan akses pengerjaan video cepat dengan mendaftarkan NIM akademis Anda.</p>
+            </div>
+            <form id="form-register" class="auth-form">
+              <div class="form-group">
+                <label for="reg-nama">Nama Lengkap</label>
+                <div class="input-with-icon">
+                  <i data-lucide="user"></i>
+                  <input type="text" id="reg-nama" class="form-control" required placeholder="Nama lengkap sesuai KTM">
+                </div>
+              </div>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="reg-nim">NIM / NPM</label>
+                  <div class="input-with-icon">
+                    <i data-lucide="hash"></i>
+                    <input type="text" id="reg-nim" class="form-control" required placeholder="Nomor Induk Mahasiswa">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="reg-univ">Universitas</label>
+                  <div class="input-with-icon">
+                    <i data-lucide="graduation-cap"></i>
+                    <input type="text" id="reg-univ" class="form-control" required placeholder="Nama Kampus">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="reg-email">Email</label>
+                <div class="input-with-icon">
+                  <i data-lucide="mail"></i>
+                  <input type="email" id="reg-email" class="form-control" required placeholder="name@univ.ac.id">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="reg-password">Password</label>
+                <div class="input-with-icon">
+                  <i data-lucide="lock"></i>
+                  <input type="password" id="reg-password" class="form-control" required
+                    placeholder="Minimal 6 karakter">
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Daftar Akun Baru</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. USER DASHBOARD VIEW                     -->
+    <!-- ========================================== -->
+    <section id="view-user" class="app-view dashboard-view">
+      <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar glass-panel">
+          <div class="sidebar-user-info">
+            <div class="avatar bg-purple" id="user-avatar-initial">U</div>
+            <div class="info-text">
+              <h4 id="sidebar-user-name">Nama Mahasiswa</h4>
+              <span id="sidebar-user-univ" class="txt-muted truncate">Nama Universitas</span>
+            </div>
+          </div>
+
+          <ul class="sidebar-nav">
+            <li>
+              <a href="#" class="sidebar-link active" data-tab="user-overview">
+                <i data-lucide="layout-dashboard"></i> <span>Dashboard Overview</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="sidebar-link" data-tab="user-order-form">
+                <i data-lucide="plus-circle"></i> <span>Buat Pesanan</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="sidebar-link" data-tab="user-tracking">
+                <i data-lucide="activity"></i> <span>Pelacakan Proyek</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="sidebar-link" data-tab="user-history">
+                <i data-lucide="history"></i> <span>Riwayat Pesanan</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="sidebar-link" data-tab="user-profile">
+                <i data-lucide="user-cog"></i> <span>Profil & KTM</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="sidebar-footer">
+            <button class="btn btn-outline btn-block btn-logout">
+              <i data-lucide="log-out"></i> <span>Keluar</span>
+            </button>
+          </div>
+        </aside>
+
+        <!-- Dynamic Dashboard Content Area -->
+        <main class="dashboard-main-content">
+
+          <!-- Tab: Overview -->
+          <div id="tab-user-overview" class="dashboard-tab-content active">
+            <div class="page-title-section">
+              <h2>Dashboard Mahasiswa</h2>
+              <p>Selamat datang kembali di area pemesanan Anda.</p>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+              <div class="stat-card glass-panel border-purple">
+                <div class="card-icon bg-purple-trans"><i data-lucide="shopping-bag" class="accent-purple"></i></div>
+                <div class="card-info">
+                  <span class="val" id="user-stat-total-orders">0</span>
+                  <span class="lbl">Total Pesanan</span>
+                </div>
+              </div>
+              <div class="stat-card glass-panel border-cyan">
+                <div class="card-icon bg-cyan-trans"><i data-lucide="activity" class="accent-cyan"></i></div>
+                <div class="card-info">
+                  <span class="val" id="user-stat-active-orders">0</span>
+                  <span class="lbl">Pesanan Aktif</span>
+                </div>
+              </div>
+              <div class="stat-card glass-panel border-emerald">
+                <div class="card-icon bg-emerald-trans"><i data-lucide="bell" class="accent-emerald"></i></div>
+                <div class="card-info">
+                  <span class="val" id="user-stat-notifications">0</span>
+                  <span class="lbl">Notifikasi</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Split Panel: Notifications and Recent Activity -->
+            <div class="dashboard-split-grid">
+              <div class="panel-section glass-panel">
+                <div class="panel-header">
+                  <h3>Notifikasi Terbaru</h3>
+                  <button class="btn btn-text btn-sm" id="btn-mark-notif-read">Tandai Dibaca</button>
+                </div>
+                <div class="panel-body" id="user-notifications-list">
+                  <!-- Notifications list will render here -->
+                </div>
+              </div>
+
+              <div class="panel-section glass-panel">
+                <div class="panel-header">
+                  <h3>Pesanan Terakhir</h3>
+                  <button class="btn btn-outline btn-sm" id="btn-goto-history-tab">Lihat Semua</button>
+                </div>
+                <div class="panel-body">
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Proyek</th>
+                          <th>Status</th>
+                          <th>Pembayaran</th>
+                        </tr>
+                      </thead>
+                      <tbody id="user-recent-orders-table">
+                        <!-- Filled by JS -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab: Form Pemesanan -->
+          <div id="tab-user-order-form" class="dashboard-tab-content">
+            <div class="page-title-section">
+              <h2>Form Pemesanan Editing</h2>
+              <p>Silakan isi informasi detail mengenai kebutuhan editing video Anda di bawah ini.</p>
+            </div>
+
+            <form id="user-create-order-form" class="form-container-boxed glass-panel">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="order-proyek-name">Nama Proyek Video</label>
+                  <input type="text" id="order-proyek-name" class="form-control" required
+                    placeholder="Contoh: Video Presentasi KKN Kelompok 5">
+                </div>
+                <div class="form-group">
+                  <label for="order-video-type">Jenis Video</label>
+                  <select id="order-video-type" class="form-control" required>
+                    <option value="" disabled selected>Pilih jenis video</option>
+                    <option value="Tugas Kuliah">Tugas Kuliah Presentasi</option>
+                    <option value="Wawancara Penelitian">Wawancara & Penelitian</option>
+                    <option value="Dokumentasi Acara">Dokumentasi Acara / KKN</option>
+                    <option value="Profil Organisasi">Video Profil Organisasi</option>
+                    <option value="Film Pendek">Short Movie / Film Pendek</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="order-duration">Estimasi Durasi Video Jadi (Menit)</label>
+                  <input type="number" id="order-duration" class="form-control" required min="1" max="120"
+                    placeholder="Contoh: 10">
+                </div>
+                <div class="form-group">
+                  <label for="order-deadline">Tanggal Tenggat Waktu (Deadline)</label>
+                  <input type="date" id="order-deadline" class="form-control" required>
+                </div>
+              </div>
+
+              <!-- Upload File Mock Area -->
+              <div class="form-group">
+                <label>Upload Berkas Footage / Aset Video</label>
+                <div class="upload-drag-area" id="footage-drag-area">
+                  <div class="drag-icon"><i data-lucide="cloud-upload"></i></div>
+                  <p class="drag-text">Seret & taruh berkas video Anda di sini, atau <span
+                      class="accent-cyan cursor-pointer">Klik Jelajahi</span></p>
+                  <span class="file-info txt-muted">Format yang didukung: MP4, MOV, ZIP, link GDrive. Maks 1GB.</span>
+                  <input type="file" id="order-file-input" class="hidden-file-input" style="display: none;">
+                  <div id="uploaded-footage-name" class="uploaded-file-tag hidden">
+                    <i data-lucide="file-video"></i> <span class="name">footage_tugas.zip</span>
+                    <button type="button" class="remove-btn" id="btn-remove-footage"><i data-lucide="x"></i></button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="order-notes">Catatan Tambahan untuk Editor</label>
+                <textarea id="order-notes" class="form-control" rows="4"
+                  placeholder="Tuliskan style edit yang diinginkan, penambahan musik latar (copyright free), transisi tertentu, atau arahan warna..."></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-gradient btn-lg">Kirim & Hitung Estimasi</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Tab: Tracking Pesanan -->
+          <div id="tab-user-tracking" class="dashboard-tab-content">
+            <div class="page-title-section">
+              <h2>Pelacakan Proyek Aktif</h2>
+              <p>Pantau perkembangan suntingan video Anda secara real-time.</p>
+            </div>
+
+            <div id="user-active-track-container">
+              <!-- Dynamically populated. If no active order, show empty state -->
+            </div>
+          </div>
+
+          <!-- Tab: Riwayat Pesanan -->
+          <div id="tab-user-history" class="dashboard-tab-content">
+            <div class="page-title-section">
+              <h2>Riwayat Semua Pesanan</h2>
+              <p>Daftar lengkap transaksi pembuatan video yang pernah Anda lakukan.</p>
+            </div>
+
+            <div class="glass-panel">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Kode Order</th>
+                      <th>Nama Proyek</th>
+                      <th>Tanggal Masuk</th>
+                      <th>Estimasi Harga</th>
+                      <th>Status Pesanan</th>
+                      <th>Pembayaran</th>
+                      <th>Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody id="user-history-table-body">
+                    <!-- Dynamic -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab: Profil User -->
+          <div id="tab-user-profile" class="dashboard-tab-content">
+            <div class="page-title-section">
+              <h2>Profil Mahasiswa</h2>
+              <p>Kelola informasi akun dan verifikasi identitas kampus Anda.</p>
+            </div>
+
+            <div class="profile-layout-grid">
+              <div class="profile-card glass-panel text-center">
+                <div class="profile-avatar bg-purple" id="profile-avatar-big">A</div>
+                <h3 id="profile-card-name">Andi Pratama</h3>
+                <span class="badge badge-purple" id="profile-card-role">MAHASISWA ACTIVE</span>
+                <div class="profile-stats-row">
+                  <div>
+                    <span class="num" id="profile-stat-completed">0</span>
+                    <span class="lbl">Selesai</span>
+                  </div>
+                  <div class="divider"></div>
+                  <div>
+                    <span class="num" id="profile-stat-active">0</span>
+                    <span class="lbl">Aktif</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="profile-details-card glass-panel">
+                <h3>Detail Informasi Akun</h3>
+                <form id="user-profile-update-form" class="auth-form">
+                  <div class="form-group">
+                    <label for="prof-nama">Nama Lengkap</label>
+                    <input type="text" id="prof-nama" class="form-control" required>
+                  </div>
+                  <div class="form-grid">
+                    <div class="form-group">
+                      <label for="prof-nim">NIM / NPM</label>
+                      <input type="text" id="prof-nim" class="form-control" required readonly>
+                    </div>
+                    <div class="form-group">
+                      <label for="prof-univ">Universitas</label>
+                      <input type="text" id="prof-univ" class="form-control" required readonly>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="prof-email">Email Terdaftar</label>
+                    <input type="email" id="prof-email" class="form-control" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </main>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. ADMIN DASHBOARD VIEW                    -->
+    <!-- ========================================== -->
+    <section id="view-admin" class="app-view dashboard-view">
+      <div class="dashboard-layout">
+
+        <!-- Sidebar Admin -->
+        <aside class="dashboard-sidebar glass-panel">
+          <div class="sidebar-user-info">
+            <div class="avatar bg-cyan">AD</div>
+            <div class="info-text">
+              <h4>Administrator</h4>
+              <span class="txt-muted">VPro Student Manager</span>
+            </div>
+          </div>
+
+          <ul class="sidebar-nav">
+            <li>
+              <a href="#" class="sidebar-link active" data-tab="admin-overview">
+                <i data-lucide="layout-dashboard"></i> <span>Ringkasan Bisnis</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="sidebar-link" data-tab="admin-orders">
+                <i data-lucide="folders"></i> <span>Kelola Pesanan</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="sidebar-link" data-tab="admin-users">
+                <i data-lucide="users"></i> <span>Kelola Pelanggan</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="sidebar-link" data-tab="admin-packages">
+                <i data-lucide="box"></i> <span>Kelola Paket</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="sidebar-link" data-tab="admin-reports">
+                <i data-lucide="line-chart"></i> <span>Laporan Keuangan</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="sidebar-footer">
+            <button class="btn btn-outline btn-block btn-logout">
+              <i data-lucide="log-out"></i> <span>Keluar</span>
+            </button>
+          </div>
+        </aside>
+
+        <!-- Admin Dynamic Main Area -->
+        <main class="dashboard-main-content">
+
+          <!-- Tab: Admin Overview -->
+          <div id="tab-admin-overview" class="dashboard-tab-content active">
+            <div class="page-title-section">
+              <h2>Dashboard Analitik Admin</h2>
+              <p>Status performa penjualan dan monitoring operasional editing.</p>
+            </div>
+
+            <!-- Admin Stats counters -->
+            <div class="stats-grid text-white">
+              <div class="stat-card glass-panel border-blue">
+                <div class="card-icon bg-blue-trans"><i data-lucide="layers" class="accent-cyan"></i></div>
+                <div class="card-info">
+                  <span class="val" id="admin-stat-total-orders">0</span>
+                  <span class="lbl">Total Pesanan</span>
+                </div>
+              </div>
+              <div class="stat-card glass-panel border-purple">
+                <div class="card-icon bg-purple-trans"><i data-lucide="activity" class="accent-purple"></i></div>
+                <div class="card-info">
+                  <span class="val" id="admin-stat-active-orders">0</span>
+                  <span class="lbl">Pesanan Aktif</span>
+                </div>
+              </div>
+              <div class="stat-card glass-panel border-emerald">
+                <div class="card-icon bg-emerald-trans"><i data-lucide="check-circle" class="accent-emerald"></i></div>
+                <div class="card-info">
+                  <span class="val" id="admin-stat-completed-orders">0</span>
+                  <span class="lbl">Selesai</span>
+                </div>
+              </div>
+              <div class="stat-card glass-panel border-amber">
+                <div class="card-icon bg-amber-trans"><i data-lucide="wallet" class="accent-amber"></i></div>
+                <div class="card-info">
+                  <span class="val" id="admin-stat-revenue">Rp 0</span>
+                  <span class="lbl">Pendapatan</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recent Orders Queue -->
+            <div class="panel-section glass-panel margin-top-md">
+              <div class="panel-header">
+                <h3>Antrean Pesanan Masuk (Butuh Tindakan)</h3>
+                <button class="btn btn-primary btn-sm" id="btn-admin-goto-orders">Kelola Semua Pesanan</button>
+              </div>
+              <div class="panel-body">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Kode</th>
+                        <th>Pelanggan</th>
+                        <th>Proyek</th>
+                        <th>Deadline</th>
+                        <th>Harga</th>
+                        <th>Status</th>
+                        <th>Pembayaran</th>
+                        <th>Aksi</th>
+                      </tr>
+                    </thead>
+                    <tbody id="admin-recent-orders-table">
+                      <!-- Filled dynamically -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab: Kelola Pesanan -->
+          <div id="tab-admin-orders" class="dashboard-tab-content">
+            <div class="page-title-section">
+              <h2>Manajemen Seluruh Pesanan</h2>
+              <p>Kelola status pengerjaan video, verifikasi transfer bank, dan serahkan file video jadi.</p>
+            </div>
+
+            <div class="filter-bar-panel glass-panel">
+              <div class="search-filter-row">
+                <div class="search-box">
+                  <i data-lucide="search"></i>
+                  <input type="text" id="admin-order-search" class="form-control"
+                    placeholder="Cari nama proyek atau mahasiswa...">
+                </div>
+                <div class="filter-group">
+                  <select id="admin-order-filter-status" class="form-control">
+                    <option value="all">Semua Status Pesanan</option>
+                    <option value="Menunggu Konfirmasi">Menunggu Konfirmasi</option>
+                    <option value="Diproses">Sedang Diedit</option>
+                    <option value="Revisi">Revisi</option>
+                    <option value="Selesai">Selesai</option>
+                  </select>
+                  <select id="admin-order-filter-pembayaran" class="form-control">
+                    <option value="all">Semua Status Bayar</option>
+                    <option value="Belum Bayar">Belum Bayar</option>
+                    <option value="Menunggu Verifikasi">Menunggu Verifikasi</option>
+                    <option value="Lunas">Lunas</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-panel">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Kode</th>
+                      <th>Pelanggan</th>
+                      <th>Proyek (Jenis)</th>
+                      <th>Durasi</th>
+                      <th>Deadline</th>
+                      <th>Harga</th>
+                      <th>Status Pesanan</th>
+                      <th>Pembayaran</th>
+                      <th>Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody id="admin-all-orders-table">
+                    <!-- Dynamic from js -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab: Kelola User -->
+          <div id="tab-admin-users" class="dashboard-tab-content">
+            <div class="page-title-section">
+              <h2>Data Pelanggan Mahasiswa</h2>
+              <p class="section-subtitle">Berikut daftar mahasiswa terdaftar yang menggunakan jasa VPro Student.</p>
+            </div>
+
+            <div class="glass-panel">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Nama Pelanggan</th>
+                      <th>NIM</th>
+                      <th>Universitas</th>
+                      <th>Email</th>
+                      <th>Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody id="admin-users-table-body">
+                    <!-- dynamic -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab: Kelola Paket -->
+          <div id="tab-admin-packages" class="dashboard-tab-content">
+            <div class="page-title-section">
+              <h2>Pengaturan Paket Harga Editing</h2>
+              <p>Ubah, tambah, atau hapus skema harga jasa editing video di landing page.</p>
+              <button class="btn btn-primary" id="btn-admin-add-package-modal" style="margin-top: 10px;">
+                <i data-lucide="plus"></i> Tambah Paket Baru
+              </button>
+            </div>
+
+            <div class="pricing-grid" id="admin-packages-list">
+              <!-- Dynamically rendered -->
+            </div>
+          </div>
+
+          <!-- Tab: Laporan Grafik -->
+          <div id="tab-admin-reports" class="dashboard-tab-content">
+            <div class="page-title-section">
+              <h2>Laporan Keuangan & Kinerja</h2>
+              <p>Grafik tren omzet pendapatan dan intensitas pesanan masuk 6 hari terakhir.</p>
+            </div>
+
+            <div class="reports-grid">
+              <div class="panel-section glass-panel">
+                <div class="panel-header">
+                  <h3>Grafik Pendapatan (Rupiah)</h3>
+                </div>
+                <div class="panel-body text-center">
+                  <!-- SVG Chart Container -->
+                  <div class="svg-chart-container" id="income-chart-svg-wrap">
+                    <!-- Rendered by SVG dynamically in app.js -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel-section glass-panel">
+                <div class="panel-header">
+                  <h3>Jumlah Pesanan Masuk (Video)</h3>
+                </div>
+                <div class="panel-body text-center">
+                  <!-- SVG Chart Container -->
+                  <div class="svg-chart-container" id="orders-chart-svg-wrap">
+                    <!-- Rendered by SVG dynamically in app.js -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </main>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- MODAL WINDOWS / POPUPS                     -->
+  <!-- ========================================== -->
+
+  <!-- Modal: Detail Pesanan (Admin & User) -->
+  <div class="modal-backdrop" id="modal-order-detail" style="display: none;">
+    <div class="modal-box glass-panel">
+      <div class="modal-header">
+        <h3>Detail Pesanan <span id="md-order-id" class="accent-cyan">#ord-123</span></h3>
+        <button class="modal-close-btn" id="btn-close-detail-modal"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body" id="order-detail-modal-body">
+        <!-- Will be filled by js dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Upload Bukti Bayar (User) -->
+  <div class="modal-backdrop" id="modal-upload-receipt" style="display: none;">
+    <div class="modal-box glass-panel">
+      <div class="modal-header">
+        <h3>Unggah Bukti Pembayaran</h3>
+        <button class="modal-close-btn" id="btn-close-receipt-modal"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <form id="form-upload-receipt">
+          <input type="hidden" id="receipt-order-id">
+          <p class="margin-bottom-sm">Kirim pembayaran sebesar <strong class="accent-amber" id="receipt-order-price">Rp
+              0</strong> ke rekening berikut:</p>
+          <div class="bank-transfer-info glass-panel margin-bottom-sm">
+            <p><strong>BANK BCA</strong> — 1234-567-890</p>
+            <p>A.N. VPro Student Indonesia</p>
+          </div>
+
+          <div class="form-group">
+            <label for="receipt-file-input">Pilih File Bukti Pembayaran (JPG/PNG)</label>
+            <input type="file" id="receipt-file-input" class="form-control" required accept="image/*">
+          </div>
+          <button type="submit" class="btn btn-gradient btn-block">Kirim Bukti Transfer</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Tambah/Edit Paket (Admin) -->
+  <div class="modal-backdrop" id="modal-edit-package" style="display: none;">
+    <div class="modal-box glass-panel">
+      <div class="modal-header">
+        <h3 id="package-modal-title">Tambah Paket Baru</h3>
+        <button class="modal-close-btn" id="btn-close-package-modal"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <form id="form-edit-package">
+          <input type="hidden" id="package-id">
+          <div class="form-group">
+            <label for="pkg-name">Nama Paket</label>
+            <input type="text" id="pkg-name" class="form-control" required placeholder="Contoh: Paket Vlog Cinematic">
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="pkg-price">Harga (Rupiah)</label>
+              <input type="number" id="pkg-price" class="form-control" required min="1000" placeholder="Contoh: 35000">
+            </div>
+            <div class="form-group">
+              <label for="pkg-duration">Durasi Maksimal Video</label>
+              <input type="text" id="pkg-duration" class="form-control" required placeholder="Contoh: 10 Menit">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="pkg-desc">Deskripsi Paket</label>
+            <textarea id="pkg-desc" class="form-control" rows="3" required
+              placeholder="Jelaskan fitur-fitur paket ini..."></textarea>
+          </div>
+          <div class="form-group" style="display: flex; align-items: center; gap: 10px; margin-top: 15px;">
+            <input type="checkbox" id="pkg-popular"
+              style="width: 20px; height: 20px; cursor: pointer; accent-color: var(--accent-purple);">
+            <label for="pkg-popular"
+              style="margin-bottom: 0; cursor: pointer; font-weight: 500; color: var(--text-secondary);">Highlight paket
+              ini sebagai Terpopuler</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Simpan Paket</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JS file -->
+  <script type="module" src="app.js"></script>
+</body>
+
+</html>
