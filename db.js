@@ -1,4 +1,4 @@
-const API_URL = 'https://api.vpro.cx27.site/api';
+const API_URL = 'https://api-vpro.cx27.site/api';
 const CURRENT_USER_KEY = 'vprostudent_current_user';
 
 async function apiFetch(endpoint, method = 'GET', body = null) {
