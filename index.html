@@ -356,64 +356,59 @@
               </div>
               <button type="submit" class="btn btn-gradient btn-block">Masuk Sekarang</button>
             </form>
-            <div class="auth-tips text-center">
-              <p class="txt-muted">Akun demo default:</p>
-              <p class="txt-muted"><strong>Admin:</strong> admin@vprostudent.com / admin123</p>
-              <p class="txt-muted"><strong>User:</strong> mhs@vprostudent.com / mhs123</p>
-            </div>
-          </div>
 
-          <!-- REGISTER FORM -->
-          <div id="auth-register-container" class="auth-tab-content">
-            <div class="auth-header text-center">
-              <h3>Buat Akun Mahasiswa</h3>
-              <p>Dapatkan akses pengerjaan video cepat dengan mendaftarkan NIM akademis Anda.</p>
-            </div>
-            <form id="form-register" class="auth-form">
-              <div class="form-group">
-                <label for="reg-nama">Nama Lengkap</label>
-                <div class="input-with-icon">
-                  <i data-lucide="user"></i>
-                  <input type="text" id="reg-nama" class="form-control" required placeholder="Nama lengkap sesuai KTM">
-                </div>
+            <!-- REGISTER FORM -->
+            <div id="auth-register-container" class="auth-tab-content">
+              <div class="auth-header text-center">
+                <h3>Buat Akun Mahasiswa</h3>
+                <p>Dapatkan akses pengerjaan video cepat dengan mendaftarkan NIM akademis Anda.</p>
               </div>
-              <div class="form-grid">
+              <form id="form-register" class="auth-form">
                 <div class="form-group">
-                  <label for="reg-nim">NIM / NPM</label>
+                  <label for="reg-nama">Nama Lengkap</label>
                   <div class="input-with-icon">
-                    <i data-lucide="hash"></i>
-                    <input type="text" id="reg-nim" class="form-control" required placeholder="Nomor Induk Mahasiswa">
+                    <i data-lucide="user"></i>
+                    <input type="text" id="reg-nama" class="form-control" required
+                      placeholder="Nama lengkap sesuai KTM">
+                  </div>
+                </div>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="reg-nim">NIM / NPM</label>
+                    <div class="input-with-icon">
+                      <i data-lucide="hash"></i>
+                      <input type="text" id="reg-nim" class="form-control" required placeholder="Nomor Induk Mahasiswa">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="reg-univ">Universitas</label>
+                    <div class="input-with-icon">
+                      <i data-lucide="graduation-cap"></i>
+                      <input type="text" id="reg-univ" class="form-control" required placeholder="Nama Kampus">
+                    </div>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="reg-univ">Universitas</label>
+                  <label for="reg-email">Email</label>
                   <div class="input-with-icon">
-                    <i data-lucide="graduation-cap"></i>
-                    <input type="text" id="reg-univ" class="form-control" required placeholder="Nama Kampus">
+                    <i data-lucide="mail"></i>
+                    <input type="email" id="reg-email" class="form-control" required placeholder="name@univ.ac.id">
                   </div>
                 </div>
-              </div>
-              <div class="form-group">
-                <label for="reg-email">Email</label>
-                <div class="input-with-icon">
-                  <i data-lucide="mail"></i>
-                  <input type="email" id="reg-email" class="form-control" required placeholder="name@univ.ac.id">
+                <div class="form-group">
+                  <label for="reg-password">Password</label>
+                  <div class="input-with-icon">
+                    <i data-lucide="lock"></i>
+                    <input type="password" id="reg-password" class="form-control" required
+                      placeholder="Minimal 6 karakter">
+                  </div>
                 </div>
-              </div>
-              <div class="form-group">
-                <label for="reg-password">Password</label>
-                <div class="input-with-icon">
-                  <i data-lucide="lock"></i>
-                  <input type="password" id="reg-password" class="form-control" required
-                    placeholder="Minimal 6 karakter">
-                </div>
-              </div>
-              <button type="submit" class="btn btn-primary btn-block">Daftar Akun Baru</button>
-            </form>
-          </div>
+                <button type="submit" class="btn btn-primary btn-block">Daftar Akun Baru</button>
+              </form>
+            </div>
 
+          </div>
         </div>
-      </div>
     </section>
 
     <!-- ========================================== -->
